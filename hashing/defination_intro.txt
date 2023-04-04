@@ -1,0 +1,20 @@
+Hashing is define as making key and value pair of element in arrays to esly and fastly excess them 
+
+                colligion 
+            it occures when key of two element matchs with each other 
+            Ther are two way of solving colligion 
+        1. open chaing -> making linked list on that position of key
+            
+            ex-    1 ->20
+                   2 ->30
+                   3 ->40
+                   5 ->34 ->68 ->54(handling colligion)
+                   7 ->90
+        2. Openaddressing -> use second arragument called probe number in hash funtion 
+
+
+        Two type of hashing function in STL in C++
+
+        1 -> map
+        2 -> unordered_map
+        
