@@ -48,6 +48,7 @@ void Level_traversal(Node* root)
             cout<<endl;
             q.push(NULL);
         }
+        
     }
 
 }
