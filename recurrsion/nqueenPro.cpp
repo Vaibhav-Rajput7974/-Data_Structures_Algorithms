@@ -40,7 +40,7 @@ bool nqueen(int** arr,int x,int n)
     for(int col=0;col<n;col++)
     {
         if(isSafe(arr,x,col,n))
-        {
+        { 
             arr[x][col]=1;
             if(nqueen(arr,x+1,n))
             {

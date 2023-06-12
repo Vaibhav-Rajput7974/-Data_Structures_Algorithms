@@ -51,3 +51,9 @@ int main()
     cout<<"total Number of combination from different component are ->"<<ans/2;
     return 0;
 }
+/*
+5 3
+0 1
+2 3
+0 4
+*/

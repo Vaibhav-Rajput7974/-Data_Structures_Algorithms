@@ -18,6 +18,32 @@ int main()
     cin>>source;
     dis[source]=0;
     set<pair<int,int>  >s;
+    
+    priority_queue<int, vector<int>, greater<int> > q;
+    q.push(source);
+    vector<int> vis(n+1,0);
+    vis[source]=1;
+
+    
+    while(!q.empty())
+    {
+        int node=q.top();
+        q.pop();
+
+        for(auto i:adj[node])
+        {
+            if(!vis[i.first])
+            {
+                if(dis[i.first] > dis[node] + i.second)
+                {
+                    vis[node]=1;
+                    dis[i.first]=dis[node]+i.second;
+                    q.push(i.first);
+                }
+            }
+        }
+    }
+/*
     s.insert({0,source});
     while(!s.empty())
     {
@@ -33,6 +59,7 @@ int main()
             }
         }
     }
+*/
     for(int i=0;i<=n;i++)
     {
         if(dis[i]<INF)
@@ -41,3 +68,12 @@ int main()
         }
     }
 }
+/*
+input
+4 4
+1 2 24
+1 4 20
+3 1 3
+4 3 12
+1
+*/

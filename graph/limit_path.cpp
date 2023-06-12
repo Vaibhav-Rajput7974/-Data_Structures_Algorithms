@@ -26,7 +26,7 @@ class DSU {
 class Solution {
 public:
     vector<bool> distanceLimitedPathsExist(int n, vector<vector<int>>& edgeList, vector<vector<int>>& queries) {
-        DSU(n);
+        DSU dsu(n);
         for(int i=0;i<n;i++)
         {
             queries[i].push_back(i);
@@ -44,11 +44,11 @@ public:
         {
             while(i<edgeList.size() && edgeList[i][2] < q[2])
             {
-                DSU.Union(edgeList[i][0],edgeList[i][1]);
+                dsu.Union(edgeList[i][0],edgeList[i][1]);
                 i++;
             }
 
-            if(DSU.Find(q[0]) == DSU.Find(q[1]))
+            if(dsu.Find(q[0]) == dsu.Find(q[1]))
             {
                 res[q[3]]=true;
             }
