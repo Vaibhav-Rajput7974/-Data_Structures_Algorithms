@@ -20,8 +20,7 @@ bool isSafe(int grid[N][N] ,  int row,int col,int num)
     
     for (int i = 0; i < 3; i++) 
         for (int j = 0; j < 3; j++) 
-            if (grid[i + startRow][j +  
-                            startCol] == num) 
+            if (grid[i + startRow][j +startCol] == num) 
                 return false; 
 
     return true; 
@@ -50,8 +49,8 @@ bool solvesudoko(int grid[N][N],int row,int col)
 
             if(solvesudoko(grid,row,col+1))
                 return true;
+            grid[row][col]=0;
         }
-        grid[row][col]=0;
     }
     return false;
 }

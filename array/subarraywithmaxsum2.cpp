@@ -1,3 +1,8 @@
+/*
+max sum 
+we willl not take the subarray whose sum is -ve in our answer
+
+*/
 #include<iostream>
 using namespace std;
 int main()

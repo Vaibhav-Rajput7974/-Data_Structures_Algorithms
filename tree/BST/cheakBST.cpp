@@ -1,3 +1,6 @@
+/*
+
+we will mantanin the value to current note so that we have idea of not going obove or below that value*/
 #include<iostream>
 using namespace std;
 struct Node

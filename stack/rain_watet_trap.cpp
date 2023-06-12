@@ -47,10 +47,13 @@ void water_trapped(int arr[],int n)
         cout<<left[i]<<" ";
     }
     cout<<endl;
+    int ans=0;
     for(int i=0;i<n;i++)
     {
         cout<<right[i]<<" ";
+        ans+= (min(left[i],right[i]) - arr[i]);
     }
+    cout<<ans<<endl;   
 }
 void trap(int arr[],int n)
 {
@@ -68,7 +71,7 @@ void trap(int arr[],int n)
             }
             int dif=i-st.top()-1;
             ans+=(min(arr[st.top()],arr[i])-arr[before])*dif;
-        }
+        } 
         st.push(i);
     }
     //cout<< ;
@@ -76,7 +79,8 @@ void trap(int arr[],int n)
 }
 int main()
 {
-    int arr[]={0,1,0,2,1,0,1,3,2,1,2,1};
+    int arr[]={1,2,4,1,4,21,4,5,2,5,2,4};
+    water_trapped(arr,12);
     trap(arr,12);
     return 0;
 }
