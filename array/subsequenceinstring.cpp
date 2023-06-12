@@ -1,3 +1,7 @@
+/*
+         common subsequence
+for every element we have choice to take it or not take it 
+*/
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -53,7 +57,7 @@ int main()
                 break;
             }
         }
-        if(o==0)
+        if(o==10)
         count++;
     }
     cout<<count;
