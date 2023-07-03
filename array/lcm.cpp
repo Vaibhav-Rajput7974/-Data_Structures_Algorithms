@@ -29,3 +29,5 @@ int main()
     cout << lcm_of_array(arr2) << endl; // Output: 252
     return 0;
 }
+
+

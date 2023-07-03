@@ -9,6 +9,7 @@
         "*.tcc": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "valarray": "cpp"
     }
 }
